@@ -1,0 +1,27 @@
+{{template "partials/header" .}}
+
+<h1>{{.message}}</h1>
+<br>
+<div>
+	<table class="table table-striped">
+		<thead>
+		  <tr>
+			<th scope="col">ID</th>
+			<th scope="col">Title</th>
+			<th scope="col">Body</th>
+		  </tr>
+		</thead>
+		<tbody>
+			{{range .data}}
+			<tr>
+				<th scope="row">{{.Id}}</th>
+				<td>{{ .Title }}</td>
+				<td>{{ .Body }}</td>
+			</tr>
+		  {{end}}
+		  
+		</tbody>
+	  </table>
+</div>
+
+{{template "partials/footer" .}}

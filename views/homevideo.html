@@ -1,0 +1,22 @@
+{{template "partials/atas" .}}
+<div class="album py-5 bg-light">
+  <div class="container">
+    <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-3">
+      {{range .Videos}}
+      <div class="col">
+        <a href="/videos/detail/{{.Id}}" class="list-group-item list-group-item-action">
+        <div class="card shadow-sm">
+            <img src="./public/upload/{{.Tumb}}" width="100%" height="225">
+          <div class="card-body">
+                <h5 class="card-text">Judul</h5>
+                <p class="card-text">Nama Creator</p>
+                Views . 25 Tanggal Upload
+          </div>
+        </div>
+        </a>
+      </div>
+      {{end}}
+    </div>
+  </div>
+</div>
+{{template "partials/bawah" .}}
